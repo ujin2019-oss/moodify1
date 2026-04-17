@@ -1,0 +1,139 @@
+@charset "UTF-8" ;
+
+*{margin: 0 ; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: #333;}
+
+body {font-family: 'Pretendard', '맑은고딕', sans-serif;}
+
+.swiper-slide .slidebox img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;}
+.container {width: 1400px; margin: 0 auto; border: 1px solid #888;}
+.btn1 { color: #fff; font-size: 15px; border: 1px solid #fff; border-radius: 50px; padding: 15px 32px; display: inline-flex; gap: 33px; align-items: center;} 
+
+
+header {}
+
+header .topset {display: flex; justify-content: space-between;}
+
+header .topset .search_box {width: 189px;  height: 33px;  margin-top: 9px;  border-radius: 20px;  background: linear-gradient(90deg, #F94DAB, #8B5CF6);
+  display: flex;  align-items: center;  padding: 0 2px;  position: relative;  box-sizing: border-box;}
+
+header .topset .search_box .icon {position:absolute ; left: 9px; top: 50%; transform: translateY(-50%)}
+
+header .topset .search_box input {flex: 1;  min-width: 0; height: 29px;   border: none;  outline: none;
+  background: #fff;  border-radius: 20px;  padding: 0 10px;  padding-left: 33px;  box-sizing: border-box;}
+
+header .topset .search_box {box-shadow: 0 2px 6px rgba(0,0,0,0.08);}
+
+
+header .topset .login_box {}
+header .topset .login_box .login {display: flex;}
+header .topset .login_box .logout {display: none;}
+header .topset .login_box .login a {padding: 16px 12px ; color: #3c3c3c; font-size: 15px;}
+
+header h1 {text-align: center; margin-top: 0;}  
+header h1 a {}
+
+header nav {margin-top: 10px;}
+header nav .gnb {display: flex; }
+header nav .gnb li {font-size: 18px; flex-grow: 1; font-weight: 400;}
+header nav .gnb li:hover {border-bottom: 5px solid #8B5CF6 ;   }
+header nav .gnb a {display: block; text-align: center; padding: 12px 0 ; color: #3c3c3c; }
+header nav .gnb a:hover {color: #8B5CF6 ; font-weight: 600 ;}
+
+#hero {width: 100%; height: 454px; background: url(../images/visual_main.jpg) no-repeat center 0 ; background-size: cover }
+
+#hero {position: relative;}
+
+#hero .textbox {
+ position: absolute;
+  left: 18%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;}
+
+#hero .textbox .text1 {font-size: 18px; color: #FFF; margin-bottom: 24px;}
+#hero .textbox strong {font-size: 40px; color: #FFF; margin-bottom: 19px; display: block;}
+#hero .textbox p {font-size: 20px; color: #FFF; margin-bottom: 70px; }
+#hero .textbox a {font-size: 20px; color: #FFF; padding: 15px 22px ;  border-radius: 30px; display: inline-flex; gap: 10px; align-items: center; background: linear-gradient(90deg, rgb(249, 77, 172, 0.4),rgb(139, 92, 246, 0.4)); box-shadow: 0 2px 2px  rgba(255, 255,  255, 0.8); }
+
+.swiper-slide .slidebox {width: 300%; position: relative; }
+.swiper-slide .textbox {width: 33.33%; position: absolute ; left: 50%; margin-left: -650px; top: 50%; transform: translateY(-50%)}
+
+.swiper-slide .textbox .text1 {font-size: 18px; color: #FFF; margin-bottom: 24px; }
+
+.swiper-slide .textbox strong {font-size: 40px; color: #FFF; margin-bottom: 19px; display: block;}
+.swiper-slide .textbox p {font-size: 20px; color: #FFF; margin-bottom: 70px; }
+.swiper-slide .textbox a {font-size: 20px; color: #FFF; padding: 15px 22px ;  border-radius: 30px; display: inline-flex; gap: 10px; align-items: center; background: linear-gradient(90deg, rgb(249, 77, 172, 0.4),rgb(139, 92, 246, 0.4)); box-shadow: 0 2px 2px  rgba(255, 255,  255, 0.8); }
+
+.mySwiper .swiper-button-next, .mySwiper .swiper-button-prev {color: white;}
+
+.mySwiper .swiper-pagination-bullet-active {background: white;}
+
+
+#section01 .container {display: flex; gap: 36px; padding: 50px 0 ;}
+#section01 .board {flex-grow: 1; padding-bottom: 15px; box-shadow: 2px 2px 5px rgba(136, 136, 136, 0.6); border-radius: 5px }
+
+#section01 .board .tit {padding: 10px 20px ; background: linear-gradient(90deg, #F94DAB, #8B5CF6); border-radius: 5px ; font-size: 18px; color: #fff; display: flex; align-items: center; gap: 30px;}
+#section01 .board span {flex-grow: 1;}
+
+#section01 .board ul {}
+#section01 .board ul li {}
+#section01 .board ul li a {display: flex; height: 40px; align-items: center; font-size: 14px; }
+#section01 .board ul li a .number { width: 80px; text-align: center; color: #8B5CF6; font-weight: 600;}
+#section01 .board ul li a .title { flex-grow: 1; font-weight: 500;}
+#section01 .board ul li a .singer { width: 150px; text-align: center; }
+
+#section02 {background-color: rgba(139, 92, 246, 0.1) }
+#section02 {padding: 100px 0}
+#section02 h2 {font-size: 30px; color: #3C3C3C ; width: 400px; margin: 0 auto; margin-bottom: 50px; text-align: center; }
+#section02 h2 span {font-size: 20px; font-weight: 400; color: #777; display: block ; margin-top: 15px; }
+
+#section02 ul {display: flex; flex-wrap: wrap; gap: 30px;}
+#section02 ul li {border: 1px solid #8B5CF6 ; width: 30%; flex-grow: 1; background: #fff ; border-radius: 10px; position: relative; }
+
+#section02 ul li a {display: block; padding: 50px 36px; }
+#section02 ul li a h3 {font-size: 28px; color: #5317DB; margin-bottom: 50px;}
+#section02 ul li a p {font-size: 20px; color: #8B5CF6; }
+#section02 ul li a img {width: 120px; height: 120px; position: absolute; right: 10px ; top: 10px; }
+#section02 ul li a span{color: #8B5CF6; background: #F4EFFF; width: 50px; height: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; position: absolute; right: 30px ; bottom: 10px; }
+
+#section02 ul li:hover h3 {color: #F94DAB;}
+#section02 ul li:hover p {color: #F94DAB;}
+#section02 ul li:hover img {filter: hue-rotate(40deg) saturate(120%);}
+#section02 ul li:hover span {color: #F94DAB; background: #FEEFFF}
+
+
+#section02 ul li {
+  outline: 1px solid #8B5CF6 ;
+  border: 3px solid transparent;
+  box-sizing: border-box;
+  transition: 0.3s;}
+
+#section02 ul li a {
+  border-radius: 10px;}
+
+#section02 ul li:hover {
+    outline: 1px solid transparent ;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(45deg, #F94DAB, #8B5CF6) border-box;}
+
+#section02 ul li:hover {
+  transform: scale(1.03) ; 
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.12);}
+
+#section03 .container {padding: 100px 0 ;}
+
+#section03 ul { display: flex; gap: 42px;}
+#section03 ul li { width: 40%; flex-grow: 1; border-radius: 10px; background: linear-gradient(90deg, #F94DAB, #8B5CF6); position: relative; }
+
+#section03 .textbox {color: #fff; padding: 34px 30px; }
+#section03 .textbox strong {font-size: 30px; margin-bottom: 9px; display: block;}
+#section03 .textbox p {font-size: 16px; margin-bottom: 27px;}
+
+#section03 figure {position: absolute; top: 0; right: 35px;}
