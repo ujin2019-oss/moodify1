@@ -6,12 +6,8 @@ a {text-decoration: none; color: #333;}
 
 body {font-family: 'Pretendard', '맑은고딕', sans-serif;}
 
-.swiper-slide .slidebox img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;}
-.container {width: 1400px; margin: 0 auto; border: 1px solid #888;}
+
+.container {width: 1400px; margin: 0 auto; }
 .btn1 { color: #fff; font-size: 15px; border: 1px solid #fff; border-radius: 50px; padding: 15px 32px; display: inline-flex; gap: 33px; align-items: center;} 
 
 
@@ -36,25 +32,37 @@ header .topset .login_box .logout {display: none;}
 header .topset .login_box .login a {padding: 16px 12px ; color: #3c3c3c; font-size: 15px;}
 
 header h1 {text-align: center; margin-top: 0;}  
-header h1 a {}
 
 header nav {margin-top: 10px;}
 header nav .gnb {display: flex; }
-header nav .gnb li {font-size: 18px; flex-grow: 1; font-weight: 400;}
-header nav .gnb li:hover {border-bottom: 5px solid #8B5CF6 ;   }
-header nav .gnb a {display: block; text-align: center; padding: 12px 0 ; color: #3c3c3c; }
-header nav .gnb a:hover {color: #8B5CF6 ; font-weight: 600 ;}
+header nav .gnb > li {font-size: 18px; flex-grow: 1; font-weight: 400; position: relative; transition: 0.3s ; }
+  
+header nav .gnb > li > a {display: block; text-align: center; padding: 12px 0 ; color: #3c3c3c; }
+
+header nav .gnb > li > a:hover { color: #8b5cf6; }
+
+header nav .gnb > li > a::after {content: "";  position: absolute;  left: 50%;  bottom: 0;  width: 0;  height: 3px;
+  background: #8B5CF6;  transition: 0.3s;  transform: translateX(-50%);}
+
+header nav .gnb > li > a:hover::after {width: 100%;}
+
+header nav .lnb {position: absolute; z-index: 3 ;top: 100%; width: 100%; left: 0; text-align: center; opacity: 0; visibility: hidden ; transition: 0.5s}
+header nav .lnb li {background: rgba(255, 255, 255, 0.6); padding: 12px 0 ; }
+header nav .lnb li a {}
+
+header nav .gnb > li:hover .lnb {height: 190px;}
+header nav .gnb > li:hover .lnb {opacity: 1; visibility: visible}
+
+header nav .gnb .lnb li a:hover {color: #8b5cf6;}
+
+
+
 
 #hero {width: 100%; height: 454px; background: url(../images/visual_main.jpg) no-repeat center 0 ; background-size: cover }
 
 #hero {position: relative;}
 
-#hero .textbox {
- position: absolute;
-  left: 18%;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #fff;}
+#hero .textbox { position: absolute;  left: 18%;  top: 50%;  transform: translateY(-50%);  color: #fff;}
 
 #hero .textbox .text1 {font-size: 18px; color: #FFF; margin-bottom: 24px;}
 #hero .textbox strong {font-size: 40px; color: #FFF; margin-bottom: 19px; display: block;}
@@ -89,7 +97,7 @@ header nav .gnb a:hover {color: #8B5CF6 ; font-weight: 600 ;}
 #section01 .board ul li a .singer { width: 150px; text-align: center; }
 
 #section02 {background-color: rgba(139, 92, 246, 0.1) }
-#section02 {padding: 100px 0}
+#section02 .container {padding: 100px 0}
 #section02 h2 {font-size: 30px; color: #3C3C3C ; width: 400px; margin: 0 auto; margin-bottom: 50px; text-align: center; }
 #section02 h2 span {font-size: 20px; font-weight: 400; color: #777; display: block ; margin-top: 15px; }
 
@@ -137,3 +145,79 @@ header nav .gnb a:hover {color: #8B5CF6 ; font-weight: 600 ;}
 #section03 .textbox p {font-size: 16px; margin-bottom: 27px;}
 
 #section03 figure {position: absolute; top: 0; right: 35px;}
+
+#section04 {background: #F4EFFF;}
+#section04 .container {padding: 100px 0 }
+
+#section04 h2 {font-size: 30px; color: #3C3C3C ; width: 400px; margin: 0 auto; margin-bottom: 50px; text-align: center; }
+#section04 h2 span {font-size: 20px; font-weight: 400; color: #777; display: block ; margin-top: 15px; }
+
+#section04 ul {display: grid ; grid-template-columns: 380px 560px 380px ; grid-template-rows: repeat(3, 205px) ; gap: 32px; }
+#section04 ul li {background: linear-gradient(30deg, #8B5CF6, #B493FF); border-radius: 10px; color: #fff ; padding: 39px 27px; position: relative; overflow: hidden; transition: 0.2s;}
+
+#section04 ul li a {color: #fff; }
+#section04 ul li a strong {font-size: 28px; font-weight: 600; margin-bottom: 12px; display: block; }
+#section04 ul li a p {font-size: 16px; }
+
+#section04 .content .card1 {grid-row: span 2 ;}
+#section04 .content .card2 {grid-column: span 2 ;}
+#section04 .content .card5 {grid-column: span 2;}
+
+#section04 .content li .s4_img1 {position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);}
+#section04 .content li .s4_img2 {position: absolute;  right: 120px; top: 50%; transform: translateY(-50%);}
+#section04 .content li .s4_img3 {position: absolute; right: 70px; bottom: 0}
+#section04 .content li .s4_img5 {position: absolute ; right: 125px; bottom: 0;}
+
+#section04 .content li .num {font-size: 120px; color: #6031CC; position: absolute; right: -20px; bottom: -30px; }
+
+#section04 ul li:active {transform: scale(0.96);}
+
+footer {background: #222; }
+footer .container {width: 1400px; padding: 24px 0 ; display: flex; justify-content: space-between; align-items: flex-end}
+footer .footleft {color: #fff; }
+footer .footleft figure {margin-bottom: 12px;}
+footer .footleft span {font-size: 16px;}
+footer .footleft p {font-size: 14px; margin-top: 28px; }
+
+footer .footlink {}
+footer .footlink ul {display: flex ; gap: 35px;}
+footer .footlink li a{color: #fff; font-size: 14px; font-weight: bold;}
+
+
+
+/* subpage_ai분석 */
+
+#hero_sub {height: 380px; background: url(../images/ai_sub_hero1.jpg) no-repeat center/cover ; display: flex;
+  justify-content: center;   align-items: center;  text-align: center; }
+#hero_sub .textbox {width: 100%;  max-width: 800px;}
+#hero_sub .textbox .text1 {font-size: 18px;  margin-bottom: 24px; display: block; }
+#hero_sub .textbox strong {font-size: 40px;  font-weight: 700;  margin-bottom: 19px; display: block; color: #333;}
+#hero_sub .textbox p {font-size: 20px;  display: block; color: #333;}
+
+
+.sub_nav { width: 100%;  padding: 50px 0;  }
+
+.sub_nav ul { width: 420px;  margin: 0 auto;  display: flex;}
+
+.sub_nav ul li { width: 50%;}
+
+.sub_nav ul li a { display: block;  height: 48px;  line-height: 48px;  text-align: center;  
+  border: 1px solid #B493FF;  background: #fff;  color: #333;  font-size: 18px;}
+
+/* 활성화된 메뉴 */
+.sub_nav ul li.active a { background: #B493FF;  color: #fff;}
+
+/* 두 버튼 경계선 겹침 정리 */
+.sub_nav ul li + li a { border-left: 0; }
+
+/* 호버 */
+.sub_nav ul li a:hover {background: #B493FF;  color: #fff;}
+
+#sectionbox_sub {text-align: center;align-items: center; }
+h2 {font-size: 30px; color: #333; margin-bottom: 16px;}
+h2 p {font-size: 20px; color: #333; margin-bottom: 50px; font-weight: normal;}
+.content_sub {background: url(../images/ai_img01.jpg) ; height: 929px; text-align: center; align-items: center; display: flex;  justify-content: center;}
+.content_sub .text_box 
+{display: flex;  flex-direction: column;  align-items: center;  color: #fff; }
+.content_sub span {font-size: 40px; font-weight: 600; margin-bottom: 41px;  }
+.content_sub .btn1 {background: rgba(180, 147, 255, 0.8); font-size: 24px; gap: 30px;}
